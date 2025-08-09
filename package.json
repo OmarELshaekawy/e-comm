@@ -2,6 +2,7 @@
   "name": "e-comm",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://OmarELshaekawy.github.io/e-comm",
   "type": "module",
   "base": "/e-comm/",
   "scripts": {
