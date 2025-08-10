@@ -20,7 +20,7 @@ export default function Login() {
 
       localStorage.setItem("userToken", data.token);
       alert("Login successful!");
-      navigate("/home"); // تم التعديل من "/" إلى "/home"
+      navigate("/home");
     } catch (error) {
       setErrorMsg(error.response?.data?.message || "Login failed. Please try again.");
     }
