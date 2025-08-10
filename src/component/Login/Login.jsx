@@ -15,35 +15,22 @@ export default function Login() {
     try {
       const { data } = await axios.post(
         "https://ecommerce.routemisr.com/api/v1/auth/signin",
-        {
-          email,
-          password,
-        }
+        { email, password }
       );
 
       localStorage.setItem("userToken", data.token);
       alert("Login successful!");
-      navigate("/"); 
+      navigate("/home"); // تم التعديل من "/" إلى "/home"
     } catch (error) {
-      if (error.response && error.response.data.message) {
-        setErrorMsg(error.response.data.message);
-      } else {
-        setErrorMsg("Login failed. Please try again.");
-      }
+      setErrorMsg(error.response?.data?.message || "Login failed. Please try again.");
     }
   }
 
   return (
     <div className="w-full min-h-screen flex justify-center items-center bg-gray-100">
-      <form
-        onSubmit={handleLogin}
-        className="bg-white shadow-md rounded-md p-6 w-full max-w-md"
-      >
+      <form onSubmit={handleLogin} className="bg-white shadow-md rounded-md p-6 w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">Login</h2>
-
-        {errorMsg && (
-          <p className="text-red-500 text-sm mb-3 text-center">{errorMsg}</p>
-        )}
+        {errorMsg && <p className="text-red-500 text-sm mb-3 text-center">{errorMsg}</p>}
 
         <label className="block mb-2 text-sm font-medium text-gray-700">Email</label>
         <input
