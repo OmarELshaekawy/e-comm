@@ -10,7 +10,7 @@ export default function Login() {
 
   async function handleLogin(e) {
     e.preventDefault();
-    setErrorMsg(""); // reset error
+    setErrorMsg(""); 
 
     try {
       const { data } = await axios.post(
@@ -23,7 +23,7 @@ export default function Login() {
 
       localStorage.setItem("userToken", data.token);
       alert("Login successful!");
-      navigate("/"); // يرجّعه للصفحة الرئيسية
+      navigate("/"); 
     } catch (error) {
       if (error.response && error.response.data.message) {
         setErrorMsg(error.response.data.message);
@@ -70,7 +70,6 @@ export default function Login() {
           Login
         </button>
 
-        {/* رابط نسيت كلمة المرور */}
         <p className="mt-4 text-center text-sm text-gray-600">
           Forgot password?{" "}
           <Link to="/forgetpassword" className="text-lime-600 hover:underline">

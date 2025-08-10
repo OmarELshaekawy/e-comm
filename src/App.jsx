@@ -7,16 +7,16 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        {/* أول ما يفتح المشروع */}
+        
         <Route path="/" element={<Navigate to="/login" replace />} />
 
-        {/* صفحة تسجيل الدخول */}
+       
         <Route path="/login" element={<Login />} />
 
-        {/* باقي الصفحات تحت Layout */}
+        
         <Route element={<Layout />}>
           <Route path="/home" element={<Home />} />
-          {/* أي صفحات تانية هنا */}
+          
         </Route>
       </Routes>
     </Router>
