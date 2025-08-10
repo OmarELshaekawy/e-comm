@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./component/Layout/Layout";
-import Home from "./component/Home/Home";
 import Prouduct from "./component/Prouduct/Prouduct";
 import Cart from "./component/Cart/Cart";
 import Signup from "./component/Signup/Signup";
@@ -19,14 +18,14 @@ const router = createBrowserRouter([
     path: "",
     element: <Layout />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <Login /> }, // هنا خليته يفتح على صفحة اللوجين
       { path: "prouduct", element: <Prouduct /> },
       { path: "cart", element: <Cart /> },
       { path: "register", element: <Signup /> },
       { path: "login", element: <Login /> },
       { path: "ProductDetailes/:id", element: <ProductDetailes /> },
       { path: "Forgetpassword", element: <ForgetPassword /> },
-      { path: "Updatepassword", element: <UpdatePassword /> },  
+      { path: "Updatepassword", element: <UpdatePassword /> },
       { path: "categories", element: <Categories /> },
       { path: "prands", element: <Prands /> },
       { path: "*", element: <Notfound /> },
