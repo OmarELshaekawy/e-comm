@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className="bg-white text-gray-800 p-4 shadow flex justify-between items-center">
       <div className="flex items-center space-x-6">
         <img src={logo} alt="Logo" className="h-10" />
-        <Link to="/" className="text-xl font-bold hover:text-lime-400">Home</Link>
+        <Link to="/home" className="text-xl font-bold hover:text-lime-400">Home</Link>
         <Link to="/categories" className="hover:text-lime-400">Categories</Link>
         <Link to="/prands" className="hover:text-lime-400">Brands</Link>
 
@@ -31,7 +31,7 @@ export default function Navbar() {
         ) : (
           <>
             <Link to="/login" className="hover:text-lime-400">Login</Link>
-            <Link to="/register" className="hover:text-lime-400">Register</Link>
+        
           </>
         )}
       </div>

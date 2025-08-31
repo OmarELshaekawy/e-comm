@@ -59,8 +59,14 @@ export default function Login() {
 
         <p className="mt-4 text-center text-sm text-gray-600">
           Forgot password?{" "}
-          <Link to="/forgetpassword" className="text-lime-600 hover:underline">
-            Reset here
+          <Link to="/updatepassword" className="text-lime-600 hover:underline">
+            Reset
+          </Link>
+        </p>
+           <p className="mt-4 text-center text-sm text-gray-600">
+          Or{" "}
+          <Link to="/signup" className="text-lime-600 hover:underline">
+            Sign up
           </Link>
         </p>
       </form>
